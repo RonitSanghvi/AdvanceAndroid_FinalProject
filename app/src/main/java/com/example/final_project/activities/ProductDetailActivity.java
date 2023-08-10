@@ -2,33 +2,20 @@ package com.example.final_project.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Html;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.example.final_project.R;
 import com.example.final_project.databinding.ActivityProductDetailBinding;
 import com.example.final_project.model.Product;
-import com.example.final_project.utils.Constants;
 import com.hishd.tinycart.model.Cart;
 import com.hishd.tinycart.util.TinyCartHelper;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public class ProductDetailActivity extends AppCompatActivity {
 

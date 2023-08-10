@@ -6,18 +6,12 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.example.final_project.R;
 import com.example.final_project.adapters.ProductAdapter;
 import com.example.final_project.databinding.ActivitySearchBinding;
 import com.example.final_project.model.Product;
-import com.example.final_project.utils.Constants;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.InputStream;
