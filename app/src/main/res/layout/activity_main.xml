@@ -54,7 +54,7 @@
                 <org.imaginativeworld.whynotimagecarousel.ImageCarousel
                     android:id="@+id/carousel"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="250dp"
                     app:showNavigationButtons="false"
                     app:showCaption="false"
                     app:autoPlay="true"/>
