@@ -93,7 +93,7 @@ public class CheckoutActivity extends AppCompatActivity {
                 Intent intent = new Intent(CheckoutActivity.this, PaymentGateway.class);
                 intent.putExtra("TotalPrice", totalPrice);
                 startActivity(intent);
-
+                finish();
             }
         });
 

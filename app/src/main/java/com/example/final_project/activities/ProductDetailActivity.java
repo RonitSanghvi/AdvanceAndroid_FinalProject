@@ -96,6 +96,7 @@ public class ProductDetailActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.cart) {
             startActivity(new Intent(this, CartActivity.class));
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }

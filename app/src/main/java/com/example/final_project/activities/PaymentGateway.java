@@ -19,6 +19,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.hishd.tinycart.model.Cart;
+import com.hishd.tinycart.util.TinyCartHelper;
 import com.stripe.android.PaymentConfiguration;
 import com.stripe.android.paymentsheet.PaymentSheet;
 import com.stripe.android.paymentsheet.PaymentSheetResult;
@@ -38,6 +40,8 @@ public class PaymentGateway extends AppCompatActivity {
     String ClientSecret;
     PaymentSheet paymentSheet;
     Integer Value;
+    Cart cart;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +49,7 @@ public class PaymentGateway extends AppCompatActivity {
         setContentView(R.layout.activity_payment_gateway);
 
         Value = getIntent().getIntExtra("TotalPrice", 350);
+        cart = TinyCartHelper.getCart();
 
         payment = findViewById(R.id.payment);
         PaymentConfiguration.init(this, PublishableKey);
@@ -98,6 +103,8 @@ public class PaymentGateway extends AppCompatActivity {
     private void onPaymentResult(PaymentSheetResult paymentSheetResult) {
         if(paymentSheetResult instanceof PaymentSheetResult.Completed){
             Toast.makeText(this, "Payment Success", Toast.LENGTH_SHORT).show();
+            cart.clearCart();
+            finish();
         }
     }
 
